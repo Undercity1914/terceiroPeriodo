@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package lista3.ex06.Classes;
+package lista3.ex07.Classes;
 
 import java.util.Objects;
 import java.util.Scanner;
@@ -11,30 +11,30 @@ import java.util.Scanner;
  *
  * @author marco
  */
-public class Customer 
+public class Cliente 
 {
     private String name;
     private Integer cpf;
-    private Accont accont;
+    private String address;
     
-    public Customer()
+    public Cliente()
     {
         this.name = "";
         this.cpf = 0;
-        this.accont = new Accont();
+        this.address = "";
     }
 
-    public Customer(String name, Integer cpf, Accont accont) {
+    public Cliente(String name, Integer cpf, String address) {
         this.name = name;
         this.cpf = cpf;
-        this.accont = new Accont(accont);
+        this.address = address;
     }
     
-    public Customer(Customer other)
+    public Cliente(Cliente other)
     {
         this.name = other.getName();
         this.cpf = other.getCpf();
-        this.accont = other.getAccont();
+        this.address = other.getAddress();
     }
 
     public String getName() {
@@ -53,12 +53,12 @@ public class Customer
         this.cpf = cpf;
     }
 
-    public Accont getAccont() {
-        return accont;
+    public String getAddress() {
+        return address;
     }
 
-    public void setAccont(Accont accont) {
-        this.accont = accont;
+    public void setAddress(String address) {
+        this.address = address;
     }
     
     public void fill()
@@ -71,22 +71,23 @@ public class Customer
         System.out.println("CPF: ");
         this.cpf = readLine.nextInt();
         
-        this.accont.fill();
+        System.out.println("Address: ");
+        this.address = readLine.nextLine();
     }
     
-    public void copy(Customer other)
+    public void copy(Cliente other)
     {
         this.name = other.getName();
         this.cpf = other.getCpf();
-        this.accont = other.getAccont();
+        this.address = other.getAddress();
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 97 * hash + Objects.hashCode(this.name);
-        hash = 97 * hash + Objects.hashCode(this.cpf);
-        hash = 97 * hash + Objects.hashCode(this.accont);
+        hash = 23 * hash + Objects.hashCode(this.name);
+        hash = 23 * hash + Objects.hashCode(this.cpf);
+        hash = 23 * hash + Objects.hashCode(this.address);
         return hash;
     }
 
@@ -101,33 +102,18 @@ public class Customer
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Customer other = (Customer) obj;
+        final Cliente other = (Cliente) obj;
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }
-        if (!Objects.equals(this.cpf, other.cpf)) {
+        if (!Objects.equals(this.address, other.address)) {
             return false;
         }
-        return Objects.equals(this.accont, other.accont);
+        return Objects.equals(this.cpf, other.cpf);
     }
 
     @Override
     public String toString() {
-        return "Customer{" + "name=" + name + ", cpf=" + cpf + ", accont=" + accont + '}';
-    }
-    
-    public void depositOrWithdraw()
-    {
-        int option;
-        Scanner readLine = new Scanner(System.in);
-        System.out.println("1-Deposit"
-                + "2-Withdraw");
-        System.out.println("Choose a number");
-        option = readLine.nextInt();
-        
-        if(option == 1)
-            this.accont.deposit();
-        else
-            this.accont.withdraw();
+        return "Cliente{" + "name=" + name + ", cpf=" + cpf + ", address=" + address + '}';
     }
 }
