@@ -6,6 +6,7 @@ package roteiro2.roteiro.Classes;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  *
@@ -91,13 +92,63 @@ public class Airport
         {
             Flight f = this.flight.get(i);
             List<Passanger> p = f.getPassanger();
-            if(p.size() == 0)
+            if(p.size() < 5)
             {
-                System.out.println("Empty! Removing");
+                System.out.println("Empty! Removing.");
                 this.removeFlight(f.getNumber());
+                i = size;
             }
             else
                 System.out.println("everything is going well on the flight " + f.getNumber() + ".");
         }
+    }
+    
+    public void startFlight(Integer number)
+    {
+        int size;
+        size = this.flight.size();
+        
+        for(int i = 0;i < size;i++)
+        {
+            Flight f = this.flight.get(i);
+            
+            if(f.getNumber().equals(name))
+                f.setStatus("Starting flight");
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Airport{" + "name=" + name + ", local=" + local + ", flight=" + flight + '}';
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 37 * hash + Objects.hashCode(this.name);
+        hash = 37 * hash + Objects.hashCode(this.local);
+        hash = 37 * hash + Objects.hashCode(this.flight);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Airport other = (Airport) obj;
+        if (!Objects.equals(this.name, other.name)) {
+            return false;
+        }
+        if (!Objects.equals(this.local, other.local)) {
+            return false;
+        }
+        return Objects.equals(this.flight, other.flight);
     }
 }

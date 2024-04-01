@@ -6,6 +6,7 @@ package roteiro2.roteiro.Classes;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  *
@@ -137,5 +138,52 @@ public class Flight
                 i = size;
             }
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Flight{" + "number=" + number + ", destination=" + destination + ", passangerCapacity=" + passangerCapacity + ", passanger=" + passanger + ", scale=" + scale + ", status=" + status + '}';
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 29 * hash + Objects.hashCode(this.number);
+        hash = 29 * hash + Objects.hashCode(this.destination);
+        hash = 29 * hash + Objects.hashCode(this.passangerCapacity);
+        hash = 29 * hash + Objects.hashCode(this.passanger);
+        hash = 29 * hash + Objects.hashCode(this.scale);
+        hash = 29 * hash + Objects.hashCode(this.status);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Flight other = (Flight) obj;
+        if (!Objects.equals(this.destination, other.destination)) {
+            return false;
+        }
+        if (!Objects.equals(this.status, other.status)) {
+            return false;
+        }
+        if (!Objects.equals(this.number, other.number)) {
+            return false;
+        }
+        if (!Objects.equals(this.passangerCapacity, other.passangerCapacity)) {
+            return false;
+        }
+        if (!Objects.equals(this.passanger, other.passanger)) {
+            return false;
+        }
+        return Objects.equals(this.scale, other.scale);
     }
 }
