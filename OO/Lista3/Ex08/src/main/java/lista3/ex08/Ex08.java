@@ -4,6 +4,8 @@
 
 package lista3.ex08;
 
+import gui.FrMusicRegistration;
+
 /**
  *
  * @author marco
@@ -11,6 +13,8 @@ package lista3.ex08;
 public class Ex08 {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        FrMusicRegistration window = new FrMusicRegistration();
+        
+        window.setVisible(true);
     }
 }
