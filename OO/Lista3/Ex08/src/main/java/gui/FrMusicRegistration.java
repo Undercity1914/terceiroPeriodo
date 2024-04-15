@@ -5,12 +5,16 @@
 package gui;
 
 import java.awt.Color;
+import lista3.ex08.classes.Album;
+import lista3.ex08.classes.Music;
 
 /**
  *
  * @author marco
  */
 public class FrMusicRegistration extends javax.swing.JFrame {
+    
+    private Album album;
 
     /**
      * Creates new form FrMusicRegistration
@@ -19,6 +23,7 @@ public class FrMusicRegistration extends javax.swing.JFrame {
         initComponents();
         this.enableFields(false);
         this.cleanField();
+        this.album = new Album();
         
     }
 
@@ -89,6 +94,11 @@ public class FrMusicRegistration extends javax.swing.JFrame {
 
         btnSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/save_32x32.png"))); // NOI18N
         btnSave.setText("Save");
+        btnSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSaveActionPerformed(evt);
+            }
+        });
         jPanel1.add(btnSave);
 
         lblCode.setText("Code:");
@@ -197,6 +207,10 @@ public class FrMusicRegistration extends javax.swing.JFrame {
         this.enableFields(false);
         this.cleanField();
     }//GEN-LAST:event_btnCancelActionPerformed
+
+    private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
+        this.album.addMusic();
+    }//GEN-LAST:event_btnSaveActionPerformed
 
     public void cleanField()
     {
