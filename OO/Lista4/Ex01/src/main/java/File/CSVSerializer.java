@@ -18,7 +18,7 @@ public class CSVSerializer
     {
         List<Music> musics = new ArrayList<>();
         
-        String[] line = data.split("\n");
+        String[] line = data.split("/z");
         
         for(int i = 1;i < line.length;i++)
         {
@@ -40,13 +40,13 @@ public class CSVSerializer
     
     public String toCSV(List<Music> musics)
     {
-        String csv = "Title;Singer Name;Time;Price;\n";
+        String csv = "Title;Singer Name;Time;Price;/z\n";
         
         for(Music music : musics)
             csv += music.getTitle() + ";" 
                     + music.getSingerName() + ";" 
                     + music.getTime() + ";" 
-                    + music.getPrice() + ";\n";
+                    + music.getPrice() + ";/z\n";
         return csv;
     }
 }
