@@ -4,6 +4,8 @@
 
 package lista4.ex03;
 
+import lista4.ex03.gui.FrAnimalRegister;
+
 /**
  *
  * @author marco
@@ -11,6 +13,7 @@ package lista4.ex03;
 public class Ex03 {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        FrAnimalRegister screen = new FrAnimalRegister();
+        screen.setVisible(true);
     }
 }
