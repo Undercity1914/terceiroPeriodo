@@ -1,0 +1,70 @@
+Code;Brand;Model;Year;Price;/z
+111;Toyota;Corolla;2019;20000.0;/z
+112;Honda;Civic;2018;18000.0;/z
+113;Ford;Mustang;2020;35000.0;/z
+114;Chevrolet;Camaro;2017;20000.0;/z
+115;Volkswagen;Golf;2016;15000.0;/z
+116;BMW;3 Series;2021;40000.0;/z
+117;Mercedes-Benz;C-Class;2019;38000.0;/z
+118;Audi;A4;2017;32000.0;/z
+119;Nissan;Altima;2017;16000.0;/z
+120;Hyundai;Elantra;2018;14000.0;/z
+121;Kia;Optima;2019;17000.0;/z
+122;Subaru;Impreza;2016;15000.0;/z
+123;Mazda;Mazda3;2020;22000.0;/z
+124;Volvo;S60;2018;28000.0;/z
+125;Lexus;IS;2017;32000.0;/z
+126;Infiniti;Q50;2019;35000.0;/z
+127;Porsche;911;2021;100000.0;/z
+128;Ferrari;488 GTB;2022;300000.0;/z
+129;Mitsubishi;Lancer;2017;15000.0;/z
+130;Jeep;Wrangler;2018;30000.0;/z
+131;Ram;1500;2019;35000.0;/z
+132;GMC;Sierra;2020;40000.0;/z
+133;Cadillac;Escalade;2018;60000.0;/z
+134;Lincoln;Navigator;2019;70000.0;/z
+135;Chrysler;300;2017;25000.0;/z
+136;Dodge;Challenger;2021;35000.0;/z
+137;Buick;Regal;2018;28000.0;/z
+138;Acura;TLX;2019;32000.0;/z
+139;Jaguar;XF;2016;40000.0;/z
+140;Land Rover;Range Rover;2020;90000.0;/z
+141;Tesla;Model S;2022;80000.0;/z
+142;Smart;Fortwo;2017;15000.0;/z
+143;Mini;Cooper;2018;25000.0;/z
+144;Fiat;500;2019;18000.0;/z
+145;Alfa Romeo;Giulia;2020;40000.0;/z
+146;Maserati;Ghibli;2017;60000.0;/z
+147;Lamborghini;Huracan;2021;250000.0;/z
+148;McLaren;720S;2019;300000.0;/z
+149;Bugatti;Chiron;2022;3000000.0;/z
+150;Rolls-Royce;Phantom;2021;500000.0;/z
+151;Bentley;Continental GT;2018;250000.0;/z
+152;Fiat;Panda;2016;12000.0;/z
+153;Citroen;C3;2017;14000.0;/z
+154;Peugeot;308;2018;18000.0;/z
+155;Renault;Megane;2019;20000.0;/z
+156;Seat;Leon;2020;22000.0;/z
+157;Skoda;Octavia;2018;25000.0;/z
+158;Suzuki;Swift;2017;14000.0;/z
+159;Mitsubishi;Outlander;2019;25000.0;/z
+160;Dacia;Duster;2020;18000.0;/z
+161;Jeep;Compass;2018;28000.0;/z
+162;Toyota;RAV4;2019;30000.0;/z
+163;Nissan;Rogue;2020;32000.0;/z
+164;Honda;CR-V;2017;28000.0;/z
+165;Ford;Escape;2018;25000.0;/z
+166;Chevrolet;Equinox;2019;27000.0;/z
+167;Volkswagen;Tiguan;2020;32000.0;/z
+168;BMW;X3;2017;35000.0;/z
+169;Mercedes-Benz;GLC;2018;40000.0;/z
+170;Audi;Q5;2019;42000.0;/z
+171;Subaru;Forester;2021;35000.0;/z
+172;Mazda;CX-5;2018;30000.0;/z
+173;Volvo;XC60;2019;45000.0;/z
+174;Lexus;RX;2020;50000.0;/z
+175;Infiniti;QX50;2017;38000.0;/z
+176;Porsche;Macan;2018;55000.0;/z
+177;Land Rover;Discovery Sport;2019;48000.0;/z
+178;Tesla;Model X;2022;90000.0;/z
+179;Jeep;Grand Cherokee;2018;50000.0;/z

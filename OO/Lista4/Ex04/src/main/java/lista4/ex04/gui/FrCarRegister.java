@@ -2,25 +2,25 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package lista4.ex03.gui;
+package lista4.ex04.gui;
 
 import javax.swing.JOptionPane;
-import lista4.ex03.Classes.Animal;
-import lista4.ex03.Manager.AnimalManagement;
+import lista4.ex04.Classes.Car;
+import lista4.ex04.Manager.CarManagement;
 
 /**
  *
  * @author marco
  */
-public class FrAnimalRegister extends javax.swing.JFrame {
+public class FrCarRegister extends javax.swing.JFrame {
 
     private int oldCode;
     private boolean editing;
-    private AnimalManagement manager;
+    private CarManagement manager;
     
-    public FrAnimalRegister() {
+    public FrCarRegister() {
         initComponents();
-        this.manager = new AnimalManagement();
+        this.manager = new CarManagement();
         this.editing = false;
         this.oldCode = 0;
         cleanField();
@@ -33,40 +33,40 @@ public class FrAnimalRegister extends javax.swing.JFrame {
     public void cleanField()
     {
         this.edtCode.setText("");
-        this.edtSpecies.setText("");
-        this.edtRace.setText("");
-        this.edtAge.setText("");
-        this.edtWeight.setText("");
+        this.edtBrand.setText("");
+        this.edtModel.setText("");
+        this.edtYear.setText("");
+        this.edtPrice.setText("");
     }
     
     public void enableField(boolean flag)
     {
         this.edtCode.setEnabled(flag);
-        this.edtSpecies.setEnabled(flag);
-        this.edtRace.setEnabled(flag);
-        this.edtAge.setEnabled(flag);
-        this.edtWeight.setEnabled(flag);
+        this.edtBrand.setEnabled(flag);
+        this.edtModel.setEnabled(flag);
+        this.edtYear.setEnabled(flag);
+        this.edtPrice.setEnabled(flag);
     }
     
-    public void objectForField(Animal animal)
+    public void objectForField(Car car)
     {
-        this.edtCode.setText(animal.getCode()+"");
-        this.edtSpecies.setText(animal.getSpecies());
-        this.edtRace.setText(animal.getRace());
-        this.edtAge.setText(animal.getAge()+"");
-        this.edtWeight.setText(animal.getWeight()+"");
+        this.edtCode.setText(car.getCode()+"");
+        this.edtBrand.setText(car.getBrand());
+        this.edtModel.setText(car.getModel());
+        this.edtYear.setText(car.getYear()+"");
+        this.edtPrice.setText(car.getPrice()+"");
     }
     
-    public Animal fieldForObject()
+    public Car fieldForObject()
     {
-        Animal animal = new Animal();
+        Car car = new Car();
         
-        animal.setCode(Integer.parseInt(this.edtCode.getText()));
-        animal.setSpecies(this.edtSpecies.getText());
-        animal.setRace(this.edtRace.getText());
-        animal.setAge(Integer.parseInt(this.edtAge.getText()));
-        animal.setWeight(Double.parseDouble(this.edtWeight.getText()));
-        return animal;
+        car.setCode(Integer.parseInt(this.edtCode.getText()));
+        car.setBrand(this.edtBrand.getText());
+        car.setModel(this.edtModel.getText());
+        car.setYear(Integer.parseInt(this.edtYear.getText()));
+        car.setPrice(Double.parseDouble(this.edtPrice.getText()));
+        return car;
     }
 
     /**
@@ -78,7 +78,7 @@ public class FrAnimalRegister extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lblMainLabel = new javax.swing.JLabel();
+        lblCarRegister = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         btnNew = new javax.swing.JButton();
         btnEdit = new javax.swing.JButton();
@@ -88,22 +88,22 @@ public class FrAnimalRegister extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         lblCode = new javax.swing.JLabel();
         edtCode = new javax.swing.JTextField();
-        lblSpecies = new javax.swing.JLabel();
-        edtSpecies = new javax.swing.JTextField();
-        lblRace = new javax.swing.JLabel();
-        edtRace = new javax.swing.JTextField();
-        lblAge = new javax.swing.JLabel();
-        edtAge = new javax.swing.JTextField();
-        lblWeight = new javax.swing.JLabel();
-        edtWeight = new javax.swing.JTextField();
+        edtModel = new javax.swing.JTextField();
+        lblModel = new javax.swing.JLabel();
+        edtYear = new javax.swing.JTextField();
+        lblYear = new javax.swing.JLabel();
+        edtPrice = new javax.swing.JTextField();
+        lblPrice = new javax.swing.JLabel();
+        edtBrand = new javax.swing.JTextField();
+        lblBrand = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         edtTextArea = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        lblMainLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        lblMainLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblMainLabel.setText("Animal Register");
+        lblCarRegister.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblCarRegister.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblCarRegister.setText("Car Register");
 
         btnNew.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/novo_32x32.png"))); // NOI18N
         btnNew.setText("New");
@@ -152,13 +152,13 @@ public class FrAnimalRegister extends javax.swing.JFrame {
 
         lblCode.setText("Code:");
 
-        lblSpecies.setText("Species:");
+        lblModel.setText("Model:");
 
-        lblRace.setText("Race:");
+        lblYear.setText("Year:");
 
-        lblAge.setText("Age:");
+        lblPrice.setText("Price:");
 
-        lblWeight.setText("Weight:");
+        lblBrand.setText("Brand:");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -166,51 +166,52 @@ public class FrAnimalRegister extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(lblCode, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblCode, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(edtCode, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(edtCode, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(27, 27, 27)
+                        .addComponent(lblBrand, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(edtBrand, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lblModel, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(edtModel, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(lblAge, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(87, 87, 87)
+                        .addComponent(lblYear, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(edtAge)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(lblSpecies, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(edtYear, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(98, 98, 98)
+                        .addComponent(lblPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(edtSpecies, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblRace, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(edtRace, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(lblWeight, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(edtWeight, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(edtPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(9, 9, 9)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblCode)
-                    .addComponent(edtCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblSpecies)
-                    .addComponent(edtSpecies, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblRace)
-                    .addComponent(edtRace, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(10, 10, 10)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lblWeight)
-                        .addComponent(edtWeight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(lblModel)
+                        .addComponent(edtModel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lblAge)
-                        .addComponent(edtAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(20, Short.MAX_VALUE))
+                        .addComponent(lblCode)
+                        .addComponent(edtCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblBrand)
+                        .addComponent(edtBrand, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lblPrice)
+                        .addComponent(edtPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lblYear)
+                        .addComponent(edtYear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
 
         edtTextArea.setColumns(20);
@@ -221,25 +222,25 @@ public class FrAnimalRegister extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblMainLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(lblCarRegister, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jScrollPane1)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 567, Short.MAX_VALUE))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 574, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(lblMainLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblCarRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 272, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -253,19 +254,19 @@ public class FrAnimalRegister extends javax.swing.JFrame {
 
     private void btnEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditActionPerformed
         this.editing = true;
-        this.oldCode = Integer.parseInt(JOptionPane.showInputDialog("Type the animal code", ""));
+        this.oldCode = Integer.parseInt(JOptionPane.showInputDialog("Type the car code", ""));
         
-        Animal editAnimal = this.manager.findAnimal(this.oldCode);
+        Car editCar = this.manager.findCar(this.oldCode);
         
-        if(editAnimal != null)
+        if(editCar != null)
         {
             this.cleanField();
             this.enableField(true);
             
-            objectForField(editAnimal);
+            objectForField(editCar);
         }
         else
-            JOptionPane.showMessageDialog(this, "Animal not found!");
+            JOptionPane.showMessageDialog(this, "Car not found!");
     }//GEN-LAST:event_btnEditActionPerformed
 
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
@@ -275,23 +276,23 @@ public class FrAnimalRegister extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCancelActionPerformed
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
-        this.oldCode = Integer.parseInt(JOptionPane.showInputDialog("Type the animal code", ""));
+        this.oldCode = Integer.parseInt(JOptionPane.showInputDialog("Type the car code", ""));
         
-        Animal editPerson = this.manager.findAnimal(this.oldCode);
+        Car editPerson = this.manager.findCar(this.oldCode);
         
         if(editPerson != null)
         {
-            this.manager.removeAnimal(oldCode);
+            this.manager.removeCar(oldCode);
             this.edtTextArea.setText(this.manager.toString());
         }
         else
-            JOptionPane.showMessageDialog(this, "Animal not found!");
+            JOptionPane.showMessageDialog(this, "Car not found!");
     }//GEN-LAST:event_btnDeleteActionPerformed
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
-        Animal animal = this.fieldForObject();
+        Car car = this.fieldForObject();
         if(this.editing == true)
-            this.manager.updateAnimal(this.oldCode, animal);
+            this.manager.updateCar(this.oldCode, car);
         this.cleanField();
         this.enableField(false);
         String print = this.manager.toString();
@@ -303,30 +304,26 @@ public class FrAnimalRegister extends javax.swing.JFrame {
         this.manager.saveToFile("list.csv");
     }//GEN-LAST:event_btnSaveActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCancel;
     private javax.swing.JButton btnDelete;
     private javax.swing.JButton btnEdit;
     private javax.swing.JButton btnNew;
     private javax.swing.JButton btnSave;
-    private javax.swing.JTextField edtAge;
+    private javax.swing.JTextField edtBrand;
     private javax.swing.JTextField edtCode;
-    private javax.swing.JTextField edtRace;
-    private javax.swing.JTextField edtSpecies;
+    private javax.swing.JTextField edtModel;
+    private javax.swing.JTextField edtPrice;
     private javax.swing.JTextArea edtTextArea;
-    private javax.swing.JTextField edtWeight;
+    private javax.swing.JTextField edtYear;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lblAge;
+    private javax.swing.JLabel lblBrand;
+    private javax.swing.JLabel lblCarRegister;
     private javax.swing.JLabel lblCode;
-    private javax.swing.JLabel lblMainLabel;
-    private javax.swing.JLabel lblRace;
-    private javax.swing.JLabel lblSpecies;
-    private javax.swing.JLabel lblWeight;
+    private javax.swing.JLabel lblModel;
+    private javax.swing.JLabel lblPrice;
+    private javax.swing.JLabel lblYear;
     // End of variables declaration//GEN-END:variables
 }

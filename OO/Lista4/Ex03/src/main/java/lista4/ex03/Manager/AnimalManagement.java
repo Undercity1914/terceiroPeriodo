@@ -42,6 +42,7 @@ public class AnimalManagement
                 this.animals.remove(animal);
                 i = size;
                 System.out.println("Removed!");
+                this.saveToFile("list.csv");
             }
         }
     }
