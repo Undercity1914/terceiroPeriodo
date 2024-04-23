@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Products>
+    <Product>
+        <color>Azul marinho</color>
+        <cost>10.0</cost>
+        <name>Camiseta Estampada</name>
+        <price>25.0</price>
+    </Product>
+    <Product>
+        <color>Preto</color>
+        <cost>20.0</cost>
+        <name>Tênis Esportivo Ultraleve</name>
+        <price>50.0</price>
+    </Product>
+    <Product>
+        <color>Cinza escuro</color>
+        <cost>30.0</cost>
+        <name>Mochila Resistente para Viagens</name>
+        <price>60.0</price>
+    </Product>
+    <Product>
+        <color>Marrom</color>
+        <cost>15.0</cost>
+        <name>Óculos de Sol Polarizados</name>
+        <price>35.0</price>
+    </Product>
+    <Product>
+        <color>Vermelho metálico</color>
+        <cost>5.0</cost>
+        <name>Caneca Térmica de Aço Inoxidável</name>
+        <price>15.0</price>
+    </Product>
+</Products>

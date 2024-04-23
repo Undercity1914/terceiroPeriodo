@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Musics>
+    <Music>
+        <price>1.29</price>
+        <singerName>Queen</singerName>
+        <time>354</time>
+        <title>Bohemian Rhapsody</title>
+    </Music>
+    <Music>
+        <price>1.29</price>
+        <singerName>Metallica</singerName>
+        <time>8:36</time>
+        <title>Master of Puppets</title>
+    </Music>
+    <Music>
+        <price>1.29</price>
+        <singerName>DragonForce</singerName>
+        <time>7 minutos e 24 segundos</time>
+        <title>Through the Fire and Flames</title>
+    </Music>
+    <Music>
+        <price>1.29</price>
+        <singerName>Slipknot</singerName>
+        <time>4 minutos e 38 segundos</time>
+        <title>Before I Forget</title>
+    </Music>
+    <Music>
+        <price>1.29</price>
+        <singerName>Slayer</singerName>
+        <time>4 minutos e 17 segundos</time>
+        <title>Raining Blood</title>
+    </Music>
+</Musics>
